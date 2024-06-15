@@ -20,7 +20,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_assoc();
 $hashedPassword = $row['passwordad']; 
-$profilePic = $row['profile_pic'] ? $row['profile_pic'] : 'default-profile.png';
+$profilePic = $row['profile_pic'] ? $row['profile_pic'] : 'img/default-profile.jpg';
 
 $stmt->close();
 $conn->close();
@@ -30,8 +30,8 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Account Settings</title>
-    <link rel="stylesheet" href="user-acc.css">
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="admin-acc.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -47,7 +47,7 @@ $conn->close();
             <span class="username"><?php echo htmlspecialchars($username); ?></span>
         </div>
         <ul>
-            <li><a href="User-Home.php"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="Dashboard.php"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="#" class="active"><i class="fas fa-cog"></i> Account Settings</a></li>
             <li><a href="admin-login.php"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
             <hr>
