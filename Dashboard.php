@@ -35,6 +35,7 @@ $stmt->close();
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <div class="side-panel">
@@ -67,33 +68,37 @@ $stmt->close();
         </form>
     </div>
     <div class="dash-table">
-            <table>
+            <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Category</th>
-                    <th>Date added</th>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
                 </tr>
             </thead>
             <tbody>
-                <!--sample data-->
                 <tr>
-                    <td>Book Title 1</td>
-                    <td>John Doe</td>
-                    <td>Fiction</td>
-                    <td>2024-06-15</td>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
                 </tr>
                 <tr>
-                    <td>Book Title 2</td>
-                    <td>Jane Smith</td>
-                    <td>Non-fiction</td>
-                    <td>2024-06-16</td>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
                 </tr>
-                
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
             </tbody>
-        </table>
+            </table>
     </div>
+            
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const sliders = document.querySelectorAll(".slider");
